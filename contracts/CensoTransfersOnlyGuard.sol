@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPLv3
+// SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
 
 import "./utils/TransactionUtils.sol";
@@ -17,14 +17,14 @@ contract CensoTransfersOnlyGuard is TransactionUtils {
         uint256 value,
         bytes memory data,
         Enum.Operation operation,
-        uint256 safeTxGas,
-        uint256 baseGas,
-        uint256 gasPrice,
-        address gasToken,
-        address payable refundReceiver,
-        bytes memory signatures,
-        address msgSender
-    ) public {
+        uint256, // safeTxGas,
+        uint256, // baseGas,
+        uint256, // gasPrice,
+        address, // gasToken,
+        address payable, // refundReceiver,
+        bytes memory, // signatures,
+        address // msgSender
+    ) public view {
         // do not allow any transactions which might alter the state of this safe
         // either because the target is the safe
         require(to != msg.sender, ILLEGAL_TO_ADDRESS);
