@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Censo ethereum contracts",
   "main": "dist/index.js",
-  "license": "GPLv3",
+  "license": "GPL-3.0-only",
   "files": [
     "contracts"
   ],

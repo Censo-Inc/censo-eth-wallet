@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPLv3
+// SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
 
 import "@gnosis.pm/safe-contracts/contracts/interfaces/IERC165.sol";
@@ -6,7 +6,7 @@ import "@gnosis.pm/safe-contracts/contracts/interfaces/IERC165.sol";
 contract TransactionUtils {
     function looksLikeTokenTransfer(
         bytes memory data
-    ) public view returns (bool) {
+    ) public pure returns (bool) {
         if (data.length >= 4) {
             uint32 funcHash;
             assembly {

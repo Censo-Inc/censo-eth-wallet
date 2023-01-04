@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-only
 pragma solidity >=0.7.0 <0.9.0;
 
 import "@gnosis.pm/safe-contracts/contracts/handler/DefaultCallbackHandler.sol";
@@ -26,7 +27,6 @@ contract CensoFallbackHandler is DefaultCallbackHandler {
             whitelists[msg.sender][SENTINEL_ADDRESS] = SENTINEL_ADDRESS;
         }
 
-        address previous = SENTINEL_ADDRESS;
         for (uint i = 0; i < addressesToAddOrRemove.length; i++) {
             // Each entry in `addressesToAddOrRemove` is either a single address to remove,
             // or it is an instruction to remove 1 or more addresses (up to MAX_ADDRESSES_TO_REMOVE).
