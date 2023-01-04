@@ -1,11 +1,11 @@
 {
-  "name": "censo-contracts",
-  "version": "0.1.0",
+  "name": "@censo/eth-contracts",
+  "version": "0.1.1",
   "description": "Censo ethereum contracts",
-  "main": "dist/index.js",
   "license": "GPL-3.0-only",
   "files": [
-    "contracts"
+    "contracts",
+    "build"
   ],
   "scripts": {
     "build": "hardhat compile"
