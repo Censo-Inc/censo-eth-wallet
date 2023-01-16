@@ -1,6 +1,6 @@
 {
   "name": "@censo/eth-contracts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Censo ethereum contracts",
   "license": "GPL-3.0-only",
   "files": [

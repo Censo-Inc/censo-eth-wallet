@@ -71,7 +71,10 @@ contract CensoFallbackHandler is DefaultCallbackHandler {
         // Populate return array
         uint256 addressCount = 0;
         address currentAddress = whitelists[wallet][start];
-        while (currentAddress != address(0x0) && currentAddress != SENTINEL_ADDRESS && addressCount < pageSize) {
+        if (currentAddress == address(0x0)) {
+            currentAddress = SENTINEL_ADDRESS;
+        }
+        while (currentAddress != SENTINEL_ADDRESS && addressCount < pageSize) {
             array[addressCount] = currentAddress;
             currentAddress = whitelists[wallet][currentAddress];
             addressCount++;
